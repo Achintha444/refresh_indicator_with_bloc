@@ -15,10 +15,9 @@ class RefreshBlocBloc extends Bloc<RefreshBlocEvent, RefreshBlocState> {
   ) async* {
     if (event is RefreshEvnt) {
       yield Loading();
-
+      
       // During the Loading state we can do additional checks like,
       // if the internet connection is available or not etc..
-
       await Future.delayed(
         Duration(seconds: 4),
       ); // This is to simulate that refresh process
